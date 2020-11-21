@@ -2,7 +2,7 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -11,13 +11,16 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     writeToDisk: true,
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         query: {
-          presets: ['@babel/preset-env'],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
       {
