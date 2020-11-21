@@ -19,7 +19,7 @@ const App = () => {
         <div className="joke__body">
           <div className="joke__user">
             <img className="user-avatar" src="assets/img/user01.png" />
-            <p class="user-name">Neroxx</p>
+            <p className="user-name">Neroxx</p>
           </div>
 
           <p className="joke__text">
@@ -31,10 +31,10 @@ const App = () => {
         <div className="joke__likes">
           <button
             id="btn-up"
-            class="btn-like btn-like--up"
+            className="btn-like btn-like--up"
             onClick={likesUp}
           ></button>
-          <span id="likes-up" class="likes-count likes-count--up">
+          <span id="likes-up" className="likes-count likes-count--up">
             {like}
           </span>
           <button
