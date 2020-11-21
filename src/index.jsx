@@ -14,21 +14,21 @@ const App = () => {
   };
 
   return (
-    <div class="container">
-      <div class="joke">
-        <div class="joke__body">
-          <div class="joke__user">
-            <img class="user-avatar" src="assets/img/user01.png" />
+    <div className="container">
+      <div className="joke">
+        <div className="joke__body">
+          <div className="joke__user">
+            <img className="user-avatar" src="assets/img/user01.png" />
             <p class="user-name">Neroxx</p>
           </div>
 
-          <p class="joke__text">
+          <p className="joke__text">
             The secret service isn't allowed to yell "Get down!" anymore when
             the president is about to be attacked. Now they have to yell
             "Donald, duck!"
           </p>
         </div>
-        <div class="joke__likes">
+        <div className="joke__likes">
           <button
             id="btn-up"
             class="btn-like btn-like--up"
@@ -39,10 +39,10 @@ const App = () => {
           </span>
           <button
             id="btn-down"
-            class="btn-like btn-like--down"
+            className="btn-like btn-like--down"
             onClick={disLikesUp}
           ></button>
-          <span id="likes-down" class="likes-count likes-count--down">
+          <span id="likes-down" className="likes-count likes-count--down">
             {disLike}
           </span>
         </div>
